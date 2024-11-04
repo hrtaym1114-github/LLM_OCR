@@ -124,7 +124,7 @@ class ScreenshotOCRTool(QMainWindow):
         x2 = int(max(self.start_x, event.pos().x()))
         y2 = int(max(self.start_y, event.pos().y()))
 
-        # ���ーバーレイを閉じる
+        # ーバーレイを閉じる
         self.overlay.close()
 
         # スクリーンショットを撮影
@@ -143,13 +143,18 @@ class ScreenshotOCRTool(QMainWindow):
         width = x2 - x1
         height = y2 - y1
         
-        # macOSのscreencaptureコマンドを使用
-        subprocess.run([
-            'screencapture',
-            '-x',  # サウンドなし
-            '-R', f"{x1},{y1},{width},{height}",  # 領域を指定
-            filename
-        ])
+        # プラットフォームの判定
+        if sys.platform == "darwin":  # macOS
+            subprocess.run([
+                'screencapture',
+                '-x',
+                '-R', f"{x1},{y1},{width},{height}",
+                filename
+            ])
+        else:  # Windows
+            # PIL.ImageGrabを使用してスクリーンショットを取得
+            screenshot = ImageGrab.grab(bbox=(x1, y1, x2, y2))
+            screenshot.save(filename)
         
         # OCR処理を実行
         text = self.perform_ocr(filename)
