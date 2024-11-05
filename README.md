@@ -14,13 +14,13 @@
 
 1. リポジトリをクローン：
 ```bash
-git clone https://github.com/yourusername/screenshot-ocr-tool.git
-cd screenshot-ocr-tool
+git clone https://github.com/hrtaym1114-github/LLM_OCR.git
+cd LLM-OCR
 ```
 
 2. 必要なパッケージをインストール：
 ```bash
-pip install -r requirements.txt
+poetry install
 ```
 
 3. `.env`ファイルを作成し、OpenAI APIキーを設定：
@@ -43,7 +43,7 @@ python openai_ocr.py
 
 - Python 3.8以上
 - OpenAI API キー
-- macOS（screencaptureコマンドを使用）
+- macOS（screencaptureコマンドを使用）or Windows
 
 ## 依存パッケージ
 
