@@ -32,7 +32,7 @@ OPENAI_API_KEY=your_api_key_here
 
 1. アプリケーションを起動：
 ```bash
-python openai_ocr.py
+python ./src/openai_ocr.py
 ```
 
 2. 「Capture & OCR」ボタンをクリックし、テキストを抽出したい画面領域を選択
