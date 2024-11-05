@@ -32,6 +32,7 @@ OPENAI_API_KEY=your_api_key_here
 
 1. アプリケーションを起動：
 ```bash
+poetry shell
 python ./src/openai_ocr.py
 ```
 
