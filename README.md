@@ -15,7 +15,7 @@
 1. リポジトリをクローン：
 ```bash
 git clone https://github.com/hrtaym1114-github/LLM_OCR.git
-cd LLM-OCR
+cd LLM_OCR
 ```
 
 2. 必要なパッケージをインストール：
