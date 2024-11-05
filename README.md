@@ -43,7 +43,6 @@ python openai_ocr.py
 
 - Python 3.8以上
 - OpenAI API キー
-- macOS（screencaptureコマンドを使用）or Windows
 
 ## 依存パッケージ
 
@@ -58,5 +57,4 @@ MITライセンス
 
 ## 注意事項
 
-- このツールはmacOS向けに開発されています
 - OpenAI APIの使用には料金が発生する場合があります
